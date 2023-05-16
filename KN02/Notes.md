@@ -10,7 +10,7 @@ A platform that provides a wide range of cloud computing services.
 Saving data using a cloud service provider (CSP) instead of a physical machine.
 
 ## Cloud Computing
-Whenever Storing Data Online
+Whenever processing Data Online
 
 ## Reasons for Cloud Computing
 - Pay less to get your business started. Pay more as your business grows.
