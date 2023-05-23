@@ -21,7 +21,7 @@ Whenever processing Data Online
 - It is easy to release your application or advertise anywhere in the word because everything is online.
 
 ## Types of Cloud Services
-![types](./TypesOfCloudServices.png)
+![types](./screenshots/./TypesOfCloudServices.png)
 
 ## Again, but different
 
@@ -85,12 +85,12 @@ Data-Warehousing for massive amounts of data
 AWS DNS web service
 
 ## AWS Cloud Structure
-![AWS Cloud Structure](2023-05-16-10-29-31.png)
+![AWS Cloud Structure](./screenshots/2023-05-16-10-29-31.png)
 
 This diagram shows a VPC in one Region in the AWS Cloud. The VPC contains two subnets, and each subnet is in a different Availability Zone within the Region. Each subnet contains an EC2 instance.
 
 ## AWS Cloud Structure II
-![AWS Cloud Structure II](2023-05-16-10-31-05.png)
+![AWS Cloud Structure II](./screenshots/2023-05-16-10-31-05.png)
 
 This diagram shows an EC2 instance within a VPC. The EC2 instance is connected to a router that is located outside the VPC but within AWS. The router is also connected to an internet gateway, which is located at the border of AWS and the internet. This internet gateway is connected to other computers that are located outside of the AWS environment.
 

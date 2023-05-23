@@ -61,11 +61,11 @@ packages: # liste von zu instalierenden paketen
 
 # D
 
-![](2023-05-23-09-05-42.png)
+![](./screenshots/2023-05-23-09-05-42.png)
 Instanz-Detail mit private-key-2
 
-![](2023-05-23-09-03-48.png)
+![](./screenshots/2023-05-23-09-03-48.png)
 Successfull ssh-key connection in PuTTY with public-key-2
 
-![](2023-05-23-09-05-04.png)
+![](./screenshots/2023-05-23-09-05-04.png)
 Unsuccessfull ssh-key connection in PuTTY with public-key-1
