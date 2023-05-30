@@ -16,10 +16,12 @@ disable_root: false
 package_update: true
 packages:
   - mariadb-server
+  - php-mysqli
 
 runcmd:
- - [ "sudo mysql -sfu root -e \"GRANT ALL ON *.* TO 'admin'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;\"" ]
- - [ "sudo systemctl restart mariadb.service" ]
+ - sudo mysql -sfu root -e "GRANT ALL ON *.* TO 'admin'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;"
+ - sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+ - sudo systemctl restart mariadb.service
 ```
 
 ## cloud-init-web.yaml
@@ -41,7 +43,8 @@ packages: # liste von zu instalierenden paketen
   - apache2
   - php
   - libapache2-mod-php
-  - php-mysqli
+  - php-mysqli7
+  - adminer
 
 write_files:
  - encoding: b64
@@ -53,6 +56,17 @@ write_files:
    path: /var/www/html/info.php
 
 runcmd:
- - "sudo systemctl restart apache2"
+ - sudo systemctl restart apache2
+ - sudo a2enconf adminer
+ - sudo systemctl restart apache2
 ```
+
+
+![](2023-05-30-10-30-19.png)
+
+"mysql -u admin -p" im Terminal
+
+![](2023-05-30-10-31-16.png)
+
+Lokale Verbindung mit dBeaver
 
