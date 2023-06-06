@@ -1,6 +1,8 @@
 # A
 
-## cloud-init-db.yaml
+## Yaml's
+
+### cloud-init-db.yaml
 ```yaml
 #cloud-config
 users: # alle User
@@ -24,7 +26,7 @@ runcmd:
  - sudo systemctl restart mariadb.service
 ```
 
-## cloud-init-web.yaml
+### cloud-init-web.yaml
 ```yaml
 #cloud-config
 users: # alle User
@@ -43,30 +45,74 @@ packages: # liste von zu instalierenden paketen
   - apache2
   - php
   - libapache2-mod-php
-  - php-mysqli7
+  - php-mysqli
   - adminer
 
 write_files:
- - encoding: b64
-   content: PD9waHAKICAgICAgICAvL2RhdGFiYXNlCiAgICAgICAgJHNlcnZlcm5hbWUgPSAiMTI3LjAuMC4xIjsKICAgICAgICAkdXNlcm5hbWUgPSAiYWRtaW4iOwogICAgICAgICRwYXNzd29yZCA9ICJwYXNzd29yZCI7CiAgICAgICAgJGRibmFtZSA9ICJteXNxbCI7CiAgICAgICAgLy8gQ3JlYXRlIGNvbm5lY3Rpb24KICAgICAgICAkY29ubiA9IG5ldyBteXNxbGkoJHNlcnZlcm5hbWUsICR1c2VybmFtZSwgJHBhc3N3b3JkLCAkZGJuYW1lKTsKICAgICAgICAvLyBDaGVjayBjb25uZWN0aW9uCiAgICAgICAgaWYgKCRjb25uLT5jb25uZWN0X2Vycm9yKSB7CiAgICAgICAgICAgICAgICBkaWUoIkNvbm5lY3Rpb24gZmFpbGVkOiAiIC4gJGNvbm4tPmNvbm5lY3RfZXJyb3IpOwogICAgICAgIH0KICAgICAgICAkc3FsID0gInNlbGVjdCBIb3N0LCBVc2VyIGZyb20gbXlzcWwudXNlcjsiOwogICAgICAgICRyZXN1bHQgPSAkY29ubi0+cXVlcnkoJHNxbCk7CiAgICAgICAgd2hpbGUoJHJvdyA9ICRyZXN1bHQtPmZldGNoX2Fzc29jKCkpewogICAgICAgICAgICAgICAgZWNobygkcm93WyJIb3N0Il0gLiAiIC8gIiAuICRyb3dbIlVzZXIiXSAuICI8YnIgLz4iKTsKICAgICAgICB9CiAgICAgICAgLy92YXJfZHVtcCgkcmVzdWx0KTsKICAgID8+
+ - encoding: b64 # db.php
+   content: PD9waHAKICAgICAgICAvL2RhdGFiYXNlCiAgICAgICAgJHNlcnZlcm5hbWUgPSAiMTguMjA4LjI0NS4xNDciOwogICAgICAgICR1c2VybmFtZSA9ICJhZG1pbiI7CiAgICAgICAgJHBhc3N3b3JkID0gInBhc3N3b3JkIjsKICAgICAgICAkZGJuYW1lID0gIm15c3FsIjsKCiAgICAgICAgLy8gQ3JlYXRlIGNvbm5lY3Rpb24KICAgICAgICAkY29ubiA9IG5ldyBteXNxbGkoJHNlcnZlcm5hbWUsICR1c2VybmFtZSwgJHBhc3N3b3JkLCAkZGJuYW1lKTsKICAgICAgICAvLyBDaGVjayBjb25uZWN0aW9uCiAgICAgICAgaWYgKCRjb25uLT5jb25uZWN0X2Vycm9yKSB7CiAgICAgICAgICAgICAgICBkaWUoIkNvbm5lY3Rpb24gZmFpbGVkOiAiIC4gJGNvbm4tPmNvbm5lY3RfZXJyb3IpOwogICAgICAgIH0KCiAgICAgICAgJHNxbCA9ICJzZWxlY3QgSG9zdCwgVXNlciBmcm9tIG15c3FsLnVzZXI7IjsKICAgICAgICAkcmVzdWx0ID0gJGNvbm4tPnF1ZXJ5KCRzcWwpOwogICAgICAgIHdoaWxlKCRyb3cgPSAkcmVzdWx0LT5mZXRjaF9hc3NvYygpKXsKICAgICAgICAgICAgICAgIGVjaG8oJHJvd1siSG9zdCJdIC4gIiAvICIgLiAkcm93WyJVc2VyIl0gLiAiPGJyIC8+Iik7CiAgICAgICAgfQogICAgICAgIC8vdmFyX2R1bXAoJHJlc3VsdCk7Cj8+Cg==
    path: /var/www/html/db.php
 
- - encoding: b64
+ - encoding: b64 # info.php
    content: PD9waHAKICAgICAgICAvLyBTaG93IGFsbCBpbmZvcm1hdGlvbiwgZGVmYXVsdHMgdG8gSU5GT19BTEwKICAgICAgICBwaHBpbmZvKCk7CiAgICA/Pg==
    path: /var/www/html/info.php
 
 runcmd:
- - sudo systemctl restart apache2
  - sudo a2enconf adminer
  - sudo systemctl restart apache2
 ```
+## Screenshots
 
+### db
 
-![](2023-05-30-10-30-19.png)
+![](./screenshots/2023-05-30-10-30-19.png)
 
 "mysql -u admin -p" im Terminal
 
-![](2023-05-30-10-31-16.png)
+![](./screenshots/2023-05-30-10-31-16.png)
 
 Lokale Verbindung mit dBeaver
 
+### web-server
+
+![](./screenshots/2023-05-30-10-56-34.png)
+
+db.php
+
+![](./screenshots/2023-05-30-10-57-26.png)
+
+info.php
+
+![](./screenshots/2023-05-30-10-59-48.png)
+
+index.html
+
+![](./screenshots/2023-05-30-11-01-31.png)
+
+adminer
+
+![](./screenshots/2023-05-30-11-02-54.png)
+
+successfull connection with adminer
+
+# B
+
+## a
+
+Hot Storage:
+Daten werden in SSD's abgespeichert um schnell zugreifbar zu sein.
+
+## b
+
+![](2023-05-30-11-38-19.png)
+
+Instanz mit 2 Volume
+
+![](2023-05-30-11-39-41.png)
+
+Warnung:
+Nur EBS Volumes mit "Delete on Termination" werden gelöscht. Unsere EBS Volume werden persistiert.
+
+![](2023-05-30-11-43-52.png)
+
+Nach dem Löschen: Daten im Volume werden Persistiert.
