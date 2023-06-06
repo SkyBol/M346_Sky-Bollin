@@ -104,15 +104,15 @@ Daten werden in SSD's abgespeichert um schnell zugreifbar zu sein.
 
 ## b
 
-![](2023-05-30-11-38-19.png)
+![](./screenshots/2023-05-30-11-38-19.png)
 
 Instanz mit 2 Volume
 
-![](2023-05-30-11-39-41.png)
+![](./screenshots/2023-05-30-11-39-41.png)
 
 Warnung:
 Nur EBS Volumes mit "Delete on Termination" werden gelöscht. Unsere EBS Volume werden persistiert.
 
-![](2023-05-30-11-43-52.png)
+![](./screenshots/2023-05-30-11-43-52.png)
 
 Nach dem Löschen: Daten im Volume werden Persistiert.
