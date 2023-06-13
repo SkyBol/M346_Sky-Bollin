@@ -1,6 +1,52 @@
-# A
+# Screenshots
 
-## Yaml's
+## NamensListe (Bitte ignorieren)
+liste aller namen
+
+sn-KN04-sky-v1
+KN04-web-1
+
+KN04-web-security
+KN04-db-security
+
+KN04-web-elastic-sky
+KN04-db-elastic-sky
+
+KN04-web-ni-sky
+KN04-db-ni-sky
+
+## Subnet
+
+![](src/2023-06-06-10-51-33.png)
+
+Neues Subnetz erstellt
+
+## Sicherheitsgruppen
+
+![](src/2023-06-06-11-06-35.png)
+
+Sicherheitsgruppe WEB
+
+![](src/2023-06-06-11-09-51.png)
+
+Sicherheitsgruppe DB
+
+## Elastic IPs
+
+![](src/2023-06-06-11-16-35.png)
+beide elastic IPs
+
+## Netzwerk Interface
+
+![](src/2023-06-06-11-25-35.png)
+![](src/2023-06-06-11-28-01.png)
+web-server
+
+![](src/2023-06-06-11-25-56.png)
+![](src/2023-06-06-11-27-36.png)
+db
+
+## Neue yaml's
 
 ### cloud-init-db.yaml
 ```yaml
@@ -61,58 +107,20 @@ runcmd:
  - sudo a2enconf adminer
  - sudo systemctl restart apache2
 ```
-## Screenshots
 
-### db
+## Elastische IP zuweisung
 
-![](./screenshots/2023-05-30-10-30-19.png)
+![](src/2023-06-07-13-26-57.png)
 
-"mysql -u admin -p" im Terminal
+Elastische IP zugewiesen
 
-![](./screenshots/2023-05-30-10-31-16.png)
+## Seiten aufrufen
 
-Lokale Verbindung mit dBeaver
-
-### web-server
-
-![](./screenshots/2023-05-30-10-56-34.png)
-
-db.php
-
-![](./screenshots/2023-05-30-10-57-26.png)
-
-info.php
-
-![](./screenshots/2023-05-30-10-59-48.png)
-
+![](src/2023-06-07-14-12-59.png)
 index.html
 
-![](./screenshots/2023-05-30-11-01-31.png)
+![](src/2023-06-07-14-12-40.png)
+info.php
 
-adminer
-
-![](./screenshots/2023-05-30-11-02-54.png)
-
-successfull connection with adminer
-
-# B
-
-## a
-
-Hot Storage:
-Daten werden in SSD's abgespeichert um schnell zugreifbar zu sein.
-
-## b
-
-![](./screenshots/2023-05-30-11-38-19.png)
-
-Instanz mit 2 Volume
-
-![](./screenshots/2023-05-30-11-39-41.png)
-
-Warnung:
-Nur EBS Volumes mit "Delete on Termination" werden gelöscht. Unsere EBS Volume werden persistiert.
-
-![](./screenshots/2023-05-30-11-43-52.png)
-
-Nach dem Löschen: Daten im Volume werden Persistiert.
+![](src/2023-06-13-09-46-20.png)
+db.php
